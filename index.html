@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Management</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h2>Queen's Burger</h2>
+            <p>EMPLOYEE PORTAL</p>
+        </div>
+
+        <ul class="menu">
+            <li><i class="fa-solid fa-house"></i> Dashboard</li>
+            <li><i class="fa-solid fa-book"></i> Catalog</li>
+            <li><i class="fa-solid fa-boxes-stacked"></i> Inventory</li>
+            <li class="active"><i class="fa-solid fa-box"></i> Stock Management</li>
+            <li><i class="fa-solid fa-building"></i> Branches</li>
+            <li><i class="fa-solid fa-file"></i> Reports</li>
+            <li><i class="fa-solid fa-truck"></i> Suppliers</li>
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+            <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+        </ul>
+
+        <div class="user-card">
+            <div class="avatar"></div>
+            <div>
+                <h3>M. Afton</h3>
+                <span>Admin</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="topbar">
+
+            <h1>Stock Management</h1>
+
+            <div class="notification">
+                <i class="fa-solid fa-bell"></i>
+                <span></span>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon brown">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+
+                <h3>Total Products</h3>
+                <h2>7</h2>
+                <p>Active Menu Items</p>
+            </div>
+
+            <div class="card green-card">
+
+                <div class="icon green">
+                    <i class="fa-solid fa-square-check"></i>
+                </div>
+
+                <h3>In Stock</h3>
+                <h2>5</h2>
+                <p>Branches with stocks</p>
+
+            </div>
+
+            <div class="card yellow-card">
+
+                <div class="icon yellow">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <h3>Low Stock</h3>
+                <h2>1</h2>
+                <p>Branches that need attention</p>
+
+            </div>
+
+            <div class="card red-card">
+
+                <div class="icon red">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+
+                <h3>Out of Stock</h3>
+                <h2>1</h2>
+                <p>Branch/es out of stock</p>
+
+            </div>
+
+        </div>
+
+       <div class="graph-section">
+
+    <div class="graph-placeholder">
+        <img src="chart.png" alt="Chart">
+    </div>
+
+</div>
+
+        <div class="export-container">
+            <button class="export-btn">
+                <i class="fa-solid fa-download"></i>
+                Export Report
+            </button>
+        </div>
+
+        <div class="table-container">
+
+            <div class="table-top">
+
+                <h2>Recent Stock Movements</h2>
+
+                <div class="controls">
+
+                    <div class="search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                        type="text"
+                        placeholder="Search Products...">
+
+                    </div>
+
+                    <select>
+                        <option>All Categories</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                <tr>
+                    <th>Date</th>
+                    <th>Product</th>
+                    <th>Movement Type</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Stock Level</th>
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                <tr>
+                    <td>September 19, 2026</td>
+                    <td>🍔 Burger Buns</td>
+                    <td><span class="badge in">IN</span></td>
+                    <td class="plus">+50pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>180/200</td>
+                </tr>
+
+                <tr>
+                    <td>September 20, 2026</td>
+                    <td>🥩 Beef Patty</td>
+                    <td><span class="badge in">IN</span></td>
+                    <td class="plus">+30pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>110/150</td>
+                </tr>
+
+                <tr>
+                    <td>September 21, 2026</td>
+                    <td>🧀 Cheese Slices</td>
+                    <td><span class="badge out">OUT</span></td>
+                    <td class="minus">-20pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>90/150</td>
+                </tr>
+
+                <tr>
+                    <td>September 22, 2026</td>
+                    <td>🥬 Lettuce</td>
+                    <td><span class="badge in">IN</span></td>
+                    <td class="plus">+30pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>80/100</td>
+                </tr>
+
+                <tr>
+                    <td>September 23, 2026</td>
+                    <td>🍟 Fries</td>
+                    <td><span class="badge out">OUT</span></td>
+                    <td class="minus">-20pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>50/100</td>
+                </tr>
+
+                <tr>
+                    <td>September 24, 2026</td>
+                    <td>🧴 Cooking Oil</td>
+                    <td><span class="badge low">LOW STOCK</span></td>
+                    <td class="danger">-50 Liter</td>
+                    <td><span class="status bad">Completed</span></td>
+                    <td>8/40</td>
+                </tr>
+
+                <tr>
+                    <td>September 25, 2026</td>
+                    <td>🥤 Drinks</td>
+                    <td><span class="badge out">OUT</span></td>
+                    <td class="minus">-20pcs</td>
+                    <td><span class="status complete">Completed</span></td>
+                    <td>60/100</td>
+                </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
