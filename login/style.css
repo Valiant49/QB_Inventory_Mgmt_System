@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#4e4e4e;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:1100px;
+    max-width:100%;
+    height:650px;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+}
+
+.left-panel{
+    width:60%;
+    background:#7c0010;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    padding:50px;
+}
+
+.logo{
+    margin-bottom: 15px;
+    text-align:center;
+}
+
+.logo img{
+    width:120px;
+    height:auto;
+    display:block;
+    margin:0 auto;
+}
+
+.left-panel h1{
+    font-size:55px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.portal-text{
+    font-size:16px;
+    letter-spacing:10px;
+    color:#ddd;
+    margin-bottom:60px;
+}
+
+.login-form{
+    width:380px;
+}
+
+.login-form label{
+    display:block;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.input-box{
+    background:white;
+    display:flex;
+    align-items:center;
+    height:42px;
+    margin-bottom:15px;
+}
+
+.input-box i{
+    color:black;
+    padding:0 12px;
+}
+
+.input-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    height:45px;
+    background:#f6a21a;
+    border:none;
+    color:#111;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#e09112;
+}
+
+.help-text{
+    text-align:center;
+    margin-top:15px;
+    font-size:13px;
+}
+
+.authorized{
+    margin-top:10px;
+    text-align:center;
+    font-size:12px;
+    color:#ffd54f;
+}
+
+.right-panel{
+    width:40%;
+    position:relative;
+    overflow:hidden;
+}
+
+.right-panel::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:url('sideimage.png') center/cover no-repeat;
+    filter: brightness(135%) contrast(115%);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    color:white;
+    padding:140px 50px;
+}
+
+.content h2{
+    font-size:48px;
+    line-height:1.2;
+    font-family:Georgia, serif;
+    margin-bottom:25px;
+}
+
+.content span{
+    color:#f5a623;
+}
+
+.line{
+    width:70px;
+    height:4px;
+    background:#f5a623;
+    margin-bottom:25px;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.6;
+}
