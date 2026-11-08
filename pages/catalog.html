@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger | Product Catalog</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">Q</div>
+            <div>
+                <h2>Queen's Burger</h2>
+                <span>EMPLOYEE PORTAL</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="../index.html" class="nav-link">
+                <span class="nav-icon">⌂</span>
+                Dashboard
+            </a>
+
+            <a href="catalog.html" class="nav-link active">
+                <span class="nav-icon">▤</span>
+                Catalog
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <span class="nav-icon">▣</span>
+                Inventory
+            </a>
+
+            <a href="stock-management.html" class="nav-link">
+                <span class="nav-icon">▤</span>
+                Stock Management
+            </a>
+
+            <a href="branches.html" class="nav-link">
+                <span class="nav-icon">⌂</span>
+                Branches
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <span class="nav-icon">▧</span>
+                Reports
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <span class="nav-icon">♙</span>
+                Suppliers
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <span class="nav-icon">⚙</span>
+                Settings
+            </a>
+
+            <a href="#" class="nav-link logout">
+                <span class="nav-icon">⇥</span>
+                Logout
+            </a>
+
+        </nav>
+
+        <div class="admin-profile">
+            <div class="profile-avatar">M</div>
+            <div class="profile-info">
+                <h3>M. Afton</h3>
+                <span>Admin</span>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Product Catalog</h1>
+
+            <button class="notification-btn" aria-label="Notifications">
+                ♟
+                <span class="notification-dot"></span>
+            </button>
+        </header>
+
+
+        <section class="dashboard-content">
+
+            <!-- SUMMARY CARDS -->
+            <div class="summary-grid catalog-summary">
+
+                <div class="summary-card">
+                    <div class="card-heading">
+                        <span class="card-icon">▤</span>
+                        <h3>Total Products</h3>
+                    </div>
+
+                    <div class="card-value">100</div>
+
+                    <p>Compared to last month's total</p>
+                </div>
+
+
+                <div class="summary-card">
+                    <div class="card-heading">
+                        <span class="card-icon">✓</span>
+                        <h3>Active Products</h3>
+                    </div>
+
+                    <div class="card-value green">90</div>
+
+                    <p>Currently active products</p>
+                </div>
+
+
+                <div class="summary-card">
+                    <div class="card-heading">
+                        <span class="card-icon">⊘</span>
+                        <h3>Inactive Products</h3>
+                    </div>
+
+                    <div class="card-value red">10</div>
+
+                    <p>Currently inactive products</p>
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT TABLE SECTION -->
+            <section class="catalog-section">
+
+                <div class="catalog-toolbar">
+
+                    <input
+                        type="search"
+                        class="catalog-search"
+                        placeholder="⌕  Search Products..."
+                        aria-label="Search products"
+                    >
+
+                    <div class="catalog-filters">
+
+                        <select aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                            <option>Meat</option>
+                            <option>Bread</option>
+                            <option>Produce</option>
+                            <option>Condiments</option>
+                            <option>Sauce</option>
+                        </select>
+
+                        <select aria-label="Filter by status">
+                            <option value="">All Status</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+
+                        <button class="add-product-btn">
+                            + Add Product
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT TABLE -->
+                <div class="catalog-table-wrapper">
+
+                    <table class="catalog-table">
+
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Code</th>
+                                <th>Category</th>
+                                <th>Supplier</th>
+                                <th>Price</th>
+                                <th>Unit of Measure</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td> <strong>Burger Patty</strong> </td>
+                                <td>BGRPATY112</td>
+                                <td>Meat</td>
+                                <td>PattyPro Meats</td>
+                                <td>₱ 0.00</td>
+                                <td>Kg</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Burger Buns</strong></td>
+                                <td>BGRBUNS124</td>
+                                <td>Bread</td>
+                                <td>Golden Bun Co.</td>
+                                <td>₱ 0.00</td>
+                                <td>Pcs</td>
+                                <td><span class="status inactive">Inactive</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Lettuce</strong></td>
+                                <td>GRNLETT253</td>
+                                <td>Produce</td>
+                                <td>FreshLeaf Foods</td>
+                                <td>₱ 0.00</td>
+                                <td>Kg</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Tomato</strong></td>
+                                <td>REDTMTO142</td>
+                                <td>Produce</td>
+                                <td>FreshLeaf Foods</td>
+                                <td>₱ 0.00</td>
+                                <td>Kg</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Onions</strong></td>
+                                <td>PURPONN198</td>
+                                <td>Produce</td>
+                                <td>FreshLeaf Foods</td>
+                                <td>₱ 0.00</td>
+                                <td>Kg</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Pickle</strong></td>
+                                <td>GRNPCKL298</td>
+                                <td>Condiments</td>
+                                <td>Zesty Sauce Co.</td>
+                                <td>₱ 0.00</td>
+                                <td>Kg</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Ketchup</strong></td>
+                                <td>REDKTCP365</td>
+                                <td>Sauce</td>
+                                <td>Zesty Sauce Co.</td>
+                                <td>₱ 0.00</td>
+                                <td>Bottle</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Mustard</strong></td>
+                                <td>YLWMSTD123</td>
+                                <td>Sauce</td>
+                                <td>Zesty Sauce Co.</td>
+                                <td>₱ 0.00</td>
+                                <td>Bottle</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><button class="action-btn">⋮</button></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

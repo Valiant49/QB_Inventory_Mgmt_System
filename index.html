@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger | Admin Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">Q</div>
+                <div>
+                    <h2>Queen's Burger</h2>
+                    <span>EMPLOYEE PORTAL</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="pages/catalog.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    Catalog
+                </a>
+
+                <a href="pages/inventory.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    Inventory
+                </a>
+
+                <a href="pages/stock-management.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    Stock Management
+                </a>
+
+                <a href="pages/branches.html" class="nav-link">
+                    <span class="nav-icon">⌂</span>
+                    Branches
+                </a>
+
+                <a href="pages/reports.html" class="nav-link">
+                    <span class="nav-icon">▧</span>
+                    Reports
+                </a>
+
+                <a href="pages/suppliers.html" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    Suppliers
+                </a>
+
+                <a href="pages/settings.html" class="nav-link">
+                    <span class="nav-icon">⚙</span>
+                    Settings
+                </a>
+
+                <a href="#" class="nav-link logout">
+                    <span class="nav-icon">⇥</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <!-- ADMIN PROFILE -->
+            <div class="admin-profile">
+                <div class="profile-avatar">M</div>
+                <div class="profile-info">
+                    <h3>M. Afton</h3>
+                    <span>Admin</span>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <h1>Welcome back, user</h1>
+
+                <button class="notification-btn" aria-label="Notifications">
+                    ♟
+                    <span class="notification-dot"></span>
+                </button>
+
+            </header>
+
+
+            <!-- DASHBOARD CONTENT -->
+            <section class="dashboard-content">
+
+                <!-- SUMMARY CARDS -->
+                <div class="summary-grid">
+
+                    <div class="summary-card">
+                        <div class="card-heading">
+                            <span class="card-icon">⌂</span>
+                            <h3>Total Sales</h3>
+                            <span class="card-arrow">›</span>
+                        </div>
+
+                        <div class="card-value green">
+                            ₱353,038.00
+                            <span class="percentage">+7%</span>
+                        </div>
+
+                        <p>Compared to ₱330k sales last month</p>
+                    </div>
+
+
+                    <div class="summary-card">
+                        <div class="card-heading">
+                            <span class="card-icon">⌂</span>
+                            <h3>Low Stock Items</h3>
+                            <span class="card-arrow">›</span>
+                        </div>
+
+                        <div class="card-value red">
+                            15 items
+                        </div>
+
+                        <p>Items at or below reorder threshold</p>
+                    </div>
+
+
+                    <div class="summary-card">
+                        <div class="card-heading">
+                            <span class="card-icon">⌂</span>
+                            <h3>Avg. Lead Time</h3>
+                            <span class="card-arrow">›</span>
+                        </div>
+
+                        <div class="card-value">
+                            12 days
+                        </div>
+
+                        <p>Lead time from order to delivery</p>
+                    </div>
+
+
+                    <div class="summary-card">
+                        <div class="card-heading">
+                            <span class="card-icon">⌂</span>
+                            <h3>Pending Transfers</h3>
+                            <span class="card-arrow">›</span>
+                        </div>
+
+                        <div class="card-value">
+                            514 transfers
+                        </div>
+
+                        <p>Unit transfers to other branches</p>
+                    </div>
+
+                </div>
+
+
+                <!-- CHARTS SECTION -->
+                <div class="charts-grid">
+
+                    <!-- TOTAL SALES CHART -->
+                    <div class="chart-card">
+
+                        <div class="chart-header">
+                            <h2>Total Sales</h2>
+
+                            <div class="chart-filters">
+                                <select aria-label="Sales period">
+                                    <option>Weekly</option>
+                                    <option>Monthly</option>
+                                    <option>Yearly</option>
+                                </select>
+
+                                <select aria-label="Branch">
+                                    <option>Imus Branch</option>
+                                    <option>Dasmarinas Branch</option>
+                                    <option>All Branches</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="sales-chart">
+
+                            <div class="y-axis">
+                                <span>₱100,000.00</span>
+                                <span>₱75,000.00</span>
+                                <span>₱50,000.00</span>
+                                <span>₱25,000.00</span>
+                                <span>₱0.00</span>
+                            </div>
+
+                            <div class="chart-area">
+
+                                <div class="chart-grid-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="bar-container">
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 68%;"></div>
+                                        <span>Sun</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 87%;"></div>
+                                        <span>Mon</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 20%;"></div>
+                                        <span>Tue</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 3%;"></div>
+                                        <span>Wed</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 64%;"></div>
+                                        <span>Thu</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 32%;"></div>
+                                        <span>Fri</span>
+                                    </div>
+
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 77%;"></div>
+                                        <span>Sat</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!-- BRANCH DISTRIBUTION -->
+                    <div class="chart-card distribution-card">
+
+                        <h2>Branch Distribution</h2>
+
+                        <div class="distribution-chart">
+
+                            <div class="distribution-row">
+                                <span>Imus</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 25%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 25%;"></div>
+                                    <div class="dairy" style="width: 24%;"></div>
+                                    <div class="condiments" style="width: 20%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="distribution-row">
+                                <span>Dasma</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 25%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 10%;"></div>
+                                    <div class="dairy" style="width: 22%;"></div>
+                                    <div class="condiments" style="width: 20%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="distribution-row">
+                                <span>Gen Tri</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 20%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 20%;"></div>
+                                    <div class="dairy" style="width: 18%;"></div>
+                                    <div class="condiments" style="width: 10%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="distribution-row">
+                                <span>Tagaytay</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 20%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 18%;"></div>
+                                    <div class="dairy" style="width: 12%;"></div>
+                                    <div class="condiments" style="width: 15%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="distribution-row">
+                                <span>Silang</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 18%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 22%;"></div>
+                                    <div class="dairy" style="width: 12%;"></div>
+                                    <div class="condiments" style="width: 15%;"></div>
+                                </div>
+                            </div>
+
+                            <div class="distribution-row">
+                                <span>Cavite City</span>
+                                <div class="stacked-bar">
+                                    <div class="meat" style="width: 15%;"></div>
+                                    <div class="bread" style="width: 10%;"></div>
+                                    <div class="vegetable" style="width: 25%;"></div>
+                                    <div class="dairy" style="width: 8%;"></div>
+                                    <div class="condiments" style="width: 5%;"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="chart-legend">
+                            <span><i class="meat"></i> Meat</span>
+                            <span><i class="bread"></i> Bread</span>
+                            <span><i class="vegetable"></i> Vegetable</span>
+                            <span><i class="dairy"></i> Dairy</span>
+                            <span><i class="condiments"></i> Condiments</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUPPLIER TABLE -->
+                <section class="supplier-section">
+
+                    <div class="supplier-header">
+
+                        <h2>Supplier List</h2>
+
+                        <div class="table-controls">
+
+                            <input
+                                type="search"
+                                placeholder="⌕   Search"
+                                aria-label="Search suppliers"
+                            >
+
+                            <select aria-label="Sort suppliers">
+                                <option>Sort By</option>
+                                <option>Supplier Name</option>
+                                <option>Supplier ID</option>
+                                <option>Category</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Supplier ID</th>
+                                    <th>Supplier Name</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>FS483127</td>
+                                    <td>PattyPro Meats</td>
+                                    <td>+6390 444 1111</td>
+                                    <td>inventory@pattypro.com</td>
+                                    <td>Meat</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>FS760594</td>
+                                    <td>Golden Bun Co.</td>
+                                    <td>+6390 444 1111</td>
+                                    <td>procurement@goldenbun.com</td>
+                                    <td>Bread</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>FS628451</td>
+                                    <td>FreshLeaf Foods</td>
+                                    <td>+6390 444 1111</td>
+                                    <td>resources@freshleaf.com</td>
+                                    <td>Vegetables</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>FS215863</td>
+                                    <td>Melt Dairy Co.</td>
+                                    <td>+6390 444 1111</td>
+                                    <td>procurement@meltdairy.com</td>
+                                    <td>Dairy</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>FS934708</td>
+                                    <td>Zesty Sauce Co.</td>
+                                    <td>+6390 444 1111</td>
+                                    <td>inventory@zestysauce.com</td>
+                                    <td>Condiments</td>
+                                    <td><span class="status active">Active</span></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
