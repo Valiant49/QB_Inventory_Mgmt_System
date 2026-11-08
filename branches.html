@@ -1,0 +1,702 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger - Branches</title>
+    <link rel="stylesheet" href="branches.css">
+</head>
+<body>
+
+    <div class="portal">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar__brand">
+                <div class="sidebar__logo">🍔</div> <!--Just put the real LOGO ;)-->
+                <div class="sidebar__brand-text">
+                    <h2>Queen's Burger</h2>
+                    <span>EMPLOYEE PORTAL</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+
+                <a href="index.html" class="sidebar__link">
+                    <span class="sidebar__icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="catalog.html" class="sidebar__link">
+                    <span class="sidebar__icon">▤</span>
+                    Catalog
+                </a>
+
+                <a href="inventory.html" class="sidebar__link">
+                    <span class="sidebar__icon">▣</span>
+                    Inventory
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">▤</span>
+                    Stock Management
+                </a>
+
+                <a href="branches.html" class="sidebar__link sidebar__link--active">
+                    <span class="sidebar__icon">⌂</span>
+                    Branches
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">▧</span>
+                    Reports
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">♟</span>
+                    Suppliers
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">⚙</span>
+                    Settings
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">⇥</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <!-- ADMIN PROFILE -->
+            <div class="sidebar__profile">
+                <div class="sidebar__profile-image"></div>
+
+                <div class="sidebar__profile-info">
+                    <strong>M. Afton</strong>
+                    <span>Admin</span>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP HEADER -->
+            <header class="header">
+
+                <h1 class="header__title">Branches</h1>
+
+                <button class="header__notification" aria-label="Notifications">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 22a2.2 2.2 0 0 0 2.2-2h-4.4a2.2 2.2 0 0 0 2.2 2Zm7-6-1.5-1.8V10a5.5 5.5 0 0 0-4.5-5.4V4a1 1 0 0 0-2 0v.6A5.5 5.5 0 0 0 6.5 10v4.2L5 16v1h14v-1Z"/>
+                    </svg>
+                </button>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+            <section class="content">
+
+                <!-- TOOLBAR -->
+                <div class="toolbar">
+
+                    <div class="toolbar__search">
+                        <span class="toolbar__search-icon">⌕</span>
+                        <input
+                            type="text"
+                            placeholder="Search Products..."
+                            aria-label="Search branches"
+                        >
+                    </div>
+
+                    <div class="toolbar__actions">
+
+                        <select class="toolbar__select">
+                            <option>Category</option>
+                            <option>Active</option>
+                            <option>Inactive</option>
+                            <option>Under Repair</option>
+                        </select>
+
+                        <select class="toolbar__select toolbar__select--sort">
+                            <option>Sort</option>
+                            <option>A - Z</option>
+                            <option>Z - A</option>
+                        </select>
+
+                        <label for="addBranchToggle" class="toolbar__add-button">
+                         + Add Branch
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BRANCHES TABLE -->
+                <div class="branches-card">
+
+                    <div class="branches-card__table-wrapper">
+
+                        <table class="branches-table">
+
+                            <thead>
+                                <tr>
+                                    <th>Branch Name</th>
+                                    <th>Location</th>
+                                    <th>Manager</th>
+                                    <th>Contact</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>Burger Queen Dasmarinas</strong></td>
+                                    <td>Dasmarinas, Cavite</td>
+                                    <td>Inigo Borromeo</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+                                <td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Kawit</strong></td>
+                                    <td>Kawit, Cavite</td>
+                                    <td>Luisito Valladares</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Cavite City</strong></td>
+                                    <td>Cavite City, Cavite</td>
+                                    <td>Philomena Cruz</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+                                <td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Bacoor</strong></td>
+                                    <td>Bacoor, Cavite</td>
+                                    <td>Reese Madrid</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--inactive">
+                                            <span></span> Inactive
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Gen. Tri</strong></td>
+                                    <td>General Trias, Cavite</td>
+                                    <td>Solene Clemente</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Silang</strong></td>
+                                    <td>Silang, Cavite</td>
+                                    <td>Archi Angeles</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Tagaytay</strong></td>
+                                    <td>Tagaytay, Cavite</td>
+                                    <td>Juan Dela Cruz</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--repair">
+                                            <span></span> Under Repair
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><strong>Burger Queen Main</strong></td>
+                                    <td>Imus, Cavite</td>
+                                    <td>Marie Castro</td>
+                                    <td>09123456789</td>
+                                    <td>
+                                        <span class="status status--active">
+                                            <span></span> Active
+                                        </span>
+                                    </td>
+                                    
+<td>
+    <details class="action-menu">
+        <summary class="action-button">
+            •••
+        </summary>
+
+        <div class="action-menu__dropdown">
+
+            <a href="#editBranchModal" class="action-menu__item">
+                <span>✎</span> Edit
+            </a>
+
+            <a href="#removeBranchModal" class="action-menu__item">
+             <span>🗑</span> Remove
+            </a>
+        </div>
+    </details>
+</td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+<!-- ADD BRANCH MODAL -->
+
+<input type="checkbox" id="addBranchToggle" class="modal-toggle">
+
+<div class="modal-overlay">
+
+    <div class="branch-modal">
+
+        <h2 class="branch-modal__title">Add Branch</h2>
+
+        <form class="branch-form">
+
+            <!-- BRANCH IDENTIFICATION -->
+            <div class="branch-section branch-identification">
+
+                <h3>Branch Identification</h3>
+
+                <div class="form-group">
+                    <label>Branch ID</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch Code</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch Name</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date Opened</label>
+                    <input type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select required>
+                        <option value="">Please select</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Under Repair</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- BRANCH LOCATION -->
+            <div class="branch-section branch-location">
+
+                <h3>Branch Location</h3>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>City/Municipality</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Province/Region</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Zip Code</label>
+                    <input type="text" required>
+                </div>
+
+            </div>
+
+
+            <!-- PERSON IN-CHARGE -->
+            <div class="branch-section branch-person">
+
+                <h3>Person In-Charge</h3>
+
+                <div class="form-group">
+                    <label>Branch Manager</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" required>
+                </div>
+
+            </div>
+
+
+            <!-- MODAL BUTTONS -->
+            <div class="branch-modal__footer">
+
+                <label for="addBranchToggle"
+                       class="modal-button modal-button--cancel">
+                    Cancel
+                </label>
+
+                <button type="submit"
+                        class="modal-button modal-button--save">
+                    Add Branch
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- EDIT BRANCH MODAL -->
+
+<div class="modal-overlay" id="editBranchModal">
+
+    <div class="branch-modal">
+
+        <h2 class="branch-modal__title">Edit Branch</h2>
+
+        <form class="branch-form" id="editBranchForm">
+
+            <!-- BRANCH IDENTIFICATION -->
+            <div class="branch-section">
+
+                <h3>Branch Identification</h3>
+
+                <div class="form-group">
+                    <label>Branch ID</label>
+                    <input type="text" id="editBranchID" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch Code</label>
+                    <input type="text" id="editBranchCode" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch Name</label>
+                    <input type="text" id="editBranchName" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date Opened</label>
+                    <input type="date" id="editBranchDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Status</label>
+                    <select id="editBranchStatus" required>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Under Repair</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- BRANCH LOCATION -->
+            <div class="branch-section">
+
+                <h3>Branch Location</h3>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" id="editBranchAddress" required>
+                </div>
+
+                <div class="form-group">
+                    <label>City/Municipality</label>
+                    <input type="text" id="editBranchCity" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Province/Region</label>
+                    <input type="text" id="editBranchProvince" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Zip Code</label>
+                    <input type="text" id="editBranchZip" required>
+                </div>
+
+            </div>
+
+            <!-- PERSON IN-CHARGE -->
+            <div class="branch-section branch-person">
+
+                <h3>Person In-Charge</h3>
+
+                <div class="form-group">
+                    <label>Branch Manager</label>
+                    <input type="text" id="editBranchManager" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="editBranchEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" id="editBranchContact" required>
+                </div>
+
+            </div>
+
+            <!-- FOOTER BUTTONS -->
+            <div class="branch-modal__footer">
+
+                <a href="#" class="modal-button modal-button--cancel">
+                    Cancel
+                </a>
+
+                <button type="submit" class="modal-button modal-button--save">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+<!-- REMOVE BRANCH MODAL -->
+<div class="remove-modal-overlay" id="removeBranchModal">
+    <div class="remove-modal">
+
+        <div class="remove-modal__icon">
+            <span>!</span>
+        </div>
+
+        <p class="remove-modal__message">
+            Are you sure you want to remove<br>
+            this branch? This action cannot<br>
+            be undone.
+        </p>
+
+        <div class="remove-modal__footer">
+            <a href="#" class="remove-button remove-button--cancel">
+                Cancel
+            </a>
+
+            <button type="button" class="remove-button remove-button--confirm">
+                Remove
+            </button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
