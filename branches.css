@@ -32,7 +32,7 @@ button {
 /* SIDEBAR */
 
 .sidebar {
-    width: 165px;
+    width: 180px;
     min-width: 165px;
     background-color: #690e16;
     color: white;
@@ -50,8 +50,10 @@ button {
     gap: 5px;
 }
 
-.sidebar__logo {
-    font-size: 20px;
+.sidebar__logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .sidebar__brand-text h2 {
