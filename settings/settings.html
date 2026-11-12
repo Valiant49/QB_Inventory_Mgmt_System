@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger - Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+    <div class="portal">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="sidebar__brand">
+                <div class="sidebar__logo">
+                    <img src="logo.png" alt="Logo">
+                </div> 
+                <div class="sidebar__brand-text">
+                    <h2>Queen's Burger</h2>
+                    <span>EMPLOYEE PORTAL</span>
+                </div>
+            </div>
+
+            <nav class="sidebar__nav">
+
+                <a href="index.html" class="sidebar__link">
+                    <span class="sidebar__icon">⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="catalog.html" class="sidebar__link">
+                    <span class="sidebar__icon">▤</span>
+                    Catalog
+                </a>
+
+                <a href="inventory.html" class="sidebar__link">
+                    <span class="sidebar__icon">▣</span>
+                    Inventory
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">▤</span>
+                    Stock Management
+                </a>
+
+                <a href="branches.html" class="sidebar__link sidebar__link--active">
+                    <span class="sidebar__icon">⌂</span>
+                    Branches
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">▧</span>
+                    Reports
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">♟</span>
+                    Suppliers
+                </a>
+
+                <a href="#settings.html" class="sidebar__link">
+                    <span class="sidebar__icon">⚙</span>
+                    Settings
+                </a>
+
+                <a href="#" class="sidebar__link">
+                    <span class="sidebar__icon">⇥</span>
+                    Logout
+                </a>
+
+            </nav>
+
+            <!-- ADMIN PROFILE -->
+            <div class="sidebar__profile">
+                <div class="sidebar__profile-image"></div>
+
+                <div class="sidebar__profile-info">
+                    <strong>M. Afton</strong>
+                    <span>Admin</span>
+                </div>
+            </div>
+
+        </aside>
+        <!-- MAIN CONTENT -->
+<main class="main-content">
+
+    <!-- HEADER -->
+    <header class="topbar">
+        <h1>Settings</h1>
+
+        <div class="topbar__notification">
+            <span>♟</span>
+        </div>
+    </header>
+
+    <!-- SETTINGS CONTENT -->
+    <section class="settings-content">
+
+        <!-- ACCOUNT SETTINGS -->
+        <div class="settings-section">
+            <h2>Account Settings</h2>
+            <p>Update your account's profile information and email address.</p>
+
+            <form class="settings-form">
+
+                <div class="settings-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" value="Michael Afton">
+                </div>
+
+                <div class="settings-group">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact">
+                </div>
+
+                <div class="settings-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" value="michaelafton@bq.com">
+                </div>
+
+            </form>
+        </div>
+
+        <!-- UPDATE PASSWORD -->
+        <div class="settings-section password-section">
+
+            <h2>Update Password</h2>
+            <p>Ensure your account is using a long, random password to stay secure.</p>
+
+            <form class="settings-form">
+
+                <div class="settings-group">
+                    <label for="current-password">Current Password</label>
+                    <input type="password" id="current-password">
+                </div>
+
+                <div class="settings-group">
+                    <label for="new-password">New Password</label>
+                    <input type="password" id="new-password">
+                </div>
+
+                <div class="settings-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password">
+                </div>
+
+            </form>
+        </div>
+
+        <!-- DELETE ACCOUNT -->
+        <div class="settings-section delete-section">
+
+            <h2>Delete Account</h2>
+
+            <p>
+                Once your account is deleted, all of its resources and data will be permanently deleted.
+                Before deleting your account, please download any data or information that you wish to retain.
+            </p>
+
+            <button type="button" class="delete-account-button">
+                DELETE ACCOUNT
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+</div>
+</body>
+</html>
