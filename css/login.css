@@ -129,7 +129,7 @@ button:hover{
     content:'';
     position:absolute;
     inset:0;
-    background:url('sideimage.png') center/cover no-repeat;
+    background:url('../images/sideimage.png') center/cover no-repeat;
     filter: brightness(135%) contrast(115%);
 }
 
