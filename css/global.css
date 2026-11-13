@@ -61,6 +61,16 @@
     --font-bold: 700;
     --font-black: 900;
 
+    /*
+    Font Sizes
+    */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;      /* use as the default general text*/
+    --text-lg: 20px;
+    --text-xl: 24px;        /* use for */
+    --text-2xl: 32px;
+
     /* all-rounder font*/
     /* EXAMPLE USE CASES:
     .lato-regular {
