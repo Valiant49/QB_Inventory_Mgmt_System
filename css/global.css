@@ -87,14 +87,14 @@
     /* 
     Text 
     */
-    --text-on-light: #FFFFFF;
-    --text-on-dark: #222;
+    --text-light: #FFFFFF;
+    --text-dark: #222;
 
     /* 
     Borders 
     */
     --border-brand: #864346;
-    --bordere-muted: #72383D;
+    --border-muted: #72383D;
 
     /* 
     Informational Colors 
