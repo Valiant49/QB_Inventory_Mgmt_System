@@ -1,0 +1,59 @@
+/* 
+    GLOBAL VARIABLES FOR BURGER QUEEN
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary Colors */
+    --bg-brand: #640D14;
+    --bg-brand-alt: #800E13;
+    --bg-brand-accent: #BC8034;
+
+    /* Neutrals */
+    --bg-canvas: #FAF8F5;   /* for all backgrounds */
+    --bg-surface: #FFFFFF;  /* for forms, tables, cards, and other surfaces */
+    --bg-border: #e2e8f0;   /* for any lines, borders, separators */
+
+    /* Shadows */
+    --shadow-color: 220 3% 15%;
+    --shadow-strength: 1%;
+
+    /* for buttons, inputs, badges, flat cards */
+    --shadow-sm: 
+        0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+
+    /* for hover states on cards, sticky headers, floating buttons */
+    --shadow-md: 
+        0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+        0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+
+    /* for ropdown menus, popovers, tooltips */
+    --shadow-lg: 
+        0 10px 15px -3px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%)),
+        0 4px 6px -4px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 6%));
+
+    /* for modals, dialogs, drawers */
+    --shadow-xl: 
+        0 20px 25px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 10%)),
+        0 8px 10px -6px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%));
+
+    /* Text */
+    --text-on-light: #FFFFFF;
+    --text-on-dark: #222;
+
+    /* Borders */
+    --border-brand: #864346;
+    --bordere-muted: #72383D;
+
+    /* Informational Colors */
+    --color-success: #156415;
+    --color-warning: #C5A215;
+    --color-error: #A51717;
+    --color-info: #3a53df;
+
+}
