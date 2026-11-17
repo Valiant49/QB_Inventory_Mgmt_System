@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 /* ==========================
    GENERAL STYLING
@@ -45,18 +45,10 @@ body {
     margin-bottom: 40px;
 }
 
-.brand-logo {
-    width: 35px;
-    height: 35px;
-    border: 2px solid #d4a04b;
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-weight: bold;
-    color: #d4a04b;
+.sidebar__logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 .brand h2 {
