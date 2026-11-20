@@ -268,6 +268,73 @@
     color: var(--bg-brand);
 }
 
+/* ==========================
+   ACTION DROPDOWN
+========================== */
+
+.action-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.action-menu summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.action-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    font-size: 23px;
+    cursor: pointer;
+    color: #555;
+    padding: 0 8px;
+}
+
+.action-btn:hover {
+    color: var(--bg-brand);
+}
+
+.action-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 130px;
+    background: white;
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    padding: 5px;
+    z-index: 100;
+}
+
+.action-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.action-dropdown button:hover {
+    background: #f3f3f3;
+}
+
+.action-dropdown .delete-action {
+    color: var(--color-error);
+}
+
+.action-dropdown .delete-action:hover {
+    background: #fbe7e7;
+}
 
 /* ==========================
    RESPONSIVE DESIGN
