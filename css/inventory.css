@@ -124,6 +124,23 @@ body, main {
     color: #641515;
 }
 
+.sidebar-brand {
+    display: flex;
+}
+
+.sidebar__account {
+    width: 274px;
+    height: 62px;
+    border-radius: 8px;
+    background: var(--bg-brand-accent, #BC8034);
+    display: flex;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 /*Mga texts*/
 .inventory__vs-item--title {
     color: #1C1C1C;
@@ -180,7 +197,49 @@ body, main {
     line-height: normal;
 }
 
+.sidebar__account-name {
+    width: 173.427px;
+    height: 29.028px;
+    color: #000;
+    font-family: arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.sidebar__account-role {
+    width: 83.855px;
+    height: 16.016px;
+    color: #000;
+    font-family: arial;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 /*Mga images*/
 .inventory__vs-item--icon {
     margin: 15px;
+}
+
+.logo {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.bell {
+    width: 30.811px;
+    height: 30.811px;
+    aspect-ratio: 1/1;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.sidebar__account-profile {
+    margin-right: 20px;
+    width: 45.973px;
+    height: 50px;
+    fill: #FFF;
 }
