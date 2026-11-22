@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inventory</title>
     <link rel="stylesheet" href="../css/inventory.css">
     <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
-    <header class="header">
-        <h3 class="header-title">Inventory</h3>
-        <img src="../images/notification-bell.svg" alt="Bell Icon" class="bell">
-    </header>
     <aside class="sidebar">
             <div class="sidebar-brand">
                 <img src="../images/logo.png" alt="Burger Queen Logo" class="logo">
@@ -22,44 +18,45 @@
             </div>
             <div class="sidebar-nav">
                 <div class="nav-link">
-                    <img src="../images/Vector.svg" alt="Dashboard Logo" class="menu-icon">
+                    <img src="../images/nav-icons/home.svg" alt="Dashboard Logo" class="menu-icon">
                     <h3 class="menu-text">Dashboard</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/library_books_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Catalog Logo" class="menu-icon">
+                    <img src="../images/nav-icons/catalog.svg" alt="Catalog Logo" class="menu-icon">
                     <h3 class="menu-text">Catalog</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/inventory_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Inventory Logo" class="menu-icon">
+                    <img src="../images/nav-icons/inventory.svg" alt="Inventory Logo" class="menu-icon">
                     <h3 class="menu-text">Inventory</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/inventory_2_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Stock Management Logo" class="menu-icon">
+                    <img src="../images/nav-icons/stock.svg" alt="Stock Management Logo" class="menu-icon">
                     <h3 class="menu-text">Stock Management</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/warehouse_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Branches Logo" class="menu-icon">
+                    <img src="../images/nav-icons/warehouse.svg" alt="Branches Logo" class="menu-icon">
                     <h3 class="menu-text">Branches</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/content_paste_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Reports Logo" class="menu-icon">
+                    <img src="../images/nav-icons/reports.svg" alt="Reports Logo" class="menu-icon">
                     <h3 class="menu-text">Reports</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/group_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Suppliers Logo" class="menu-icon">
+                    <img src="../images/nav-icons/suppliers.svg" alt="Suppliers Logo" class="menu-icon">
                     <h3 class="menu-text">Suppliers</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Settings Logo" class="menu-icon">
+                    <img src="../images/nav-icons/settings.svg" alt="Settings Logo" class="menu-icon">
                     <h3 class="menu-text">Settings</h3>
                 </div>
                 <div class="nav-link">
-                    <img src="../images/logout_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24 1.svg" alt="Logout Logo" class="menu-icon">
+                    <img src="../images/nav-icons/logout.svg" alt="Logout Logo" class="menu-icon">
                     <h3 class="menu-text">Logout</h3>
                 </div>
             </div>
             <div class="sidebar__account">
-                <img src="profile.png" alt="Employee Profile" class="sidebar__account-profile">
+                <!--<img src="profile.png" alt="Employee Profile" class="sidebar__account-profile">-->
+                <div class="sidebar__account-profile"></div>
                 <div class="sidebar__account-text">
                     <h1 class="sidebar__account-name">M. Afton</h1>
                     <h2 class="sidebar__account-role">Admin</h2>
@@ -67,6 +64,12 @@
             </div>
         </aside>
     <main class="main-content">
+        <div class="header-container">
+            <header class="header">
+                <h3 class="header-title">Inventory</h3>
+                <img src="../images/notification-bell.svg" alt="Bell Icon" class="bell">
+            </header>
+        </div>
         <div class="inventory__vs">
             <div class="inventory__vs-item">
                 <div class="inventory__vs-item--title">

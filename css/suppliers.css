@@ -2,6 +2,11 @@
 body, main {
     background-color: #FAF8F5;
     align-content: center;
+    display: flex;
+}
+
+.main-content {
+    display: block;
 }
 
 a {
@@ -118,10 +123,16 @@ a {
 }
 
 .suppliers__modal {
+    margin-top: 20px;
+    margin-bottom: 200px;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-top: 15px;
     width: 500px;
-    height: 600px;
+    height: 650px;
     background: var(--bg-surface, #FFF);
     border: none;
+    border-radius: 8px;
 }
 
 .suppliers__modal--form {
@@ -213,6 +224,11 @@ a {
 }
 
 .suppliers__warning {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 550px;
+    margin-right: 550px;
+    padding-top: 50px;
     width: 481.32px;
     height: 334.346px;
     border-radius: 10px;
@@ -305,13 +321,17 @@ a {
     display: flex;
 }
 
+.sidebar__text {
+    display: block;
+}
+
 .sidebar__account {
     width: 274px;
     height: 62px;
     border-radius: 8px;
     background: var(--bg-brand-accent, #BC8034);
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px;
@@ -367,6 +387,28 @@ a {
     line-height: normal;
 }
 
+.sidebar-subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 6.6px;
+}
+
+.sidebar__account-name {
+    width: 173.427px;
+    height: 29.028px;
+    color: #000;
+    font-family: arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 .sidebar__account-name {
     width: 173.427px;
     height: 29.028px;
@@ -390,10 +432,6 @@ a {
 }
 
 /*Mga Image*/
-.suppliers__warning--image {
-
-}
-
 
 .logo {
     width: 35px;
@@ -412,5 +450,6 @@ a {
     margin-right: 20px;
     width: 45.973px;
     height: 50px;
-    fill: #FFF;
+    border-radius: 50%;
+    background: #FFF;
 }

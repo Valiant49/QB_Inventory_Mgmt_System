@@ -2,6 +2,17 @@
 body, main {
     background-color: #FAF8F5;
     align-content: center;
+    display: flex;
+}
+
+.header-container {
+    position: sticky;
+    width: auto;
+    margin: 0;
+}
+
+.main-content {
+    display:inline;
 }
 
 .inventory__vs {
@@ -128,13 +139,17 @@ body, main {
     display: flex;
 }
 
+.sidebar__text {
+    display: block;
+}
+
 .sidebar__account {
     width: 274px;
     height: 62px;
     border-radius: 8px;
     background: var(--bg-brand-accent, #BC8034);
     display: flex;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 5px;
@@ -197,6 +212,17 @@ body, main {
     line-height: normal;
 }
 
+.sidebar-subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    letter-spacing: 6.6px;
+}
+
 .sidebar__account-name {
     width: 173.427px;
     height: 29.028px;
@@ -241,5 +267,6 @@ body, main {
     margin-right: 20px;
     width: 45.973px;
     height: 50px;
-    fill: #FFF;
+    border-radius: 50%;
+    background: #FFF;
 }
