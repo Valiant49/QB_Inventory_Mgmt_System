@@ -1,0 +1,325 @@
+/* =========================================================
+   STOCK MANAGEMENT PAGE STYLES (SCOPED TO .stock-movement-page)
+   Uses design tokens from global.css
+   ========================================================= */
+
+.stock-movement-page {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    width: 100%;
+    min-width: 0;
+    padding: 24px 32px;
+}
+
+/* KPI CARDS */
+.stock-movement-page .sm-cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.stock-movement-page .sm-card {
+    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.stock-movement-page .sm-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.stock-movement-page .sm-card h3 {
+    font-size: var(--text-base);
+    font-weight: var(--font-bold);
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.stock-movement-page .sm-card h2 {
+    font-size: 48px;
+    font-weight: var(--font-black);
+    line-height: 1.1;
+    margin: 8px 0;
+}
+
+.stock-movement-page .sm-card p {
+    font-size: var(--text-sm);
+    color: #555;
+}
+
+.stock-movement-page .sm-card--green {
+    background: #e6f4ea;
+    border-color: #b7dfc1;
+}
+
+.stock-movement-page .sm-card--yellow {
+    background: #fef7e0;
+    border-color: #f3dfa2;
+}
+
+.stock-movement-page .sm-card--red {
+    background: #fce8e6;
+    border-color: #f4b8b3;
+}
+
+/* CARD ICONS */
+.stock-movement-page .sm-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--text-base);
+    box-shadow: var(--shadow-sm);
+}
+
+.stock-movement-page .sm-icon--brand {
+    background: var(--bg-brand-accent);
+}
+
+.stock-movement-page .sm-icon--green {
+    background: var(--color-success);
+}
+
+.stock-movement-page .sm-icon--yellow {
+    background: var(--color-warning);
+}
+
+.stock-movement-page .sm-icon--red {
+    background: var(--color-error);
+}
+
+/* GRAPH SECTION */
+.stock-movement-page .sm-graph-section {
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.stock-movement-page .sm-graph-placeholder {
+    width: 100%;
+    max-width: 100%;
+}
+
+.stock-movement-page .sm-graph-placeholder img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* EXPORT BUTTON */
+.stock-movement-page .sm-export-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+
+.stock-movement-page .sm-export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-bold);
+    color: var(--text-dark);
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.stock-movement-page .sm-export-btn:hover {
+    background: var(--bg-canvas);
+    box-shadow: var(--shadow-md);
+}
+
+/* TABLE CONTAINER */
+.stock-movement-page .sm-table-container {
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    min-width: 0;
+}
+
+.stock-movement-page .sm-table-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.stock-movement-page .sm-table-top h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+}
+
+.stock-movement-page .sm-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stock-movement-page .sm-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.stock-movement-page .sm-search i {
+    color: #64748b;
+    font-size: var(--text-sm);
+}
+
+.stock-movement-page .sm-search input {
+    border: none;
+    outline: none;
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    color: var(--text-dark);
+    background: transparent;
+}
+
+.stock-movement-page .sm-controls select {
+    padding: 9px 12px;
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    color: var(--text-dark);
+    background: var(--bg-surface);
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.stock-movement-page .sm-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.stock-movement-page .sm-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: var(--text-sm);
+}
+
+.stock-movement-page .sm-table th {
+    background: var(--bg-canvas);
+    color: var(--text-dark);
+    font-weight: var(--font-bold);
+    padding: 12px 14px;
+    border-bottom: 2px solid var(--bg-border);
+}
+
+.stock-movement-page .sm-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--bg-border);
+    vertical-align: middle;
+}
+
+.stock-movement-page .sm-table tbody tr:hover {
+    background: var(--bg-canvas);
+}
+
+/* BADGES & STATUS PILLS */
+.stock-movement-page .sm-badge {
+    display: inline-block;
+    color: var(--text-light);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+    letter-spacing: 0.4px;
+    box-shadow: var(--shadow-sm);
+}
+
+.stock-movement-page .sm-badge--in {
+    background: var(--color-success);
+}
+
+.stock-movement-page .sm-badge--out {
+    background: var(--color-warning);
+}
+
+.stock-movement-page .sm-badge--low {
+    background: var(--color-error);
+}
+
+.stock-movement-page .sm-qty--plus {
+    color: var(--color-success);
+    font-weight: var(--font-bold);
+}
+
+.stock-movement-page .sm-qty--minus {
+    color: var(--color-warning);
+    font-weight: var(--font-bold);
+}
+
+.stock-movement-page .sm-qty--danger {
+    color: var(--color-error);
+    font-weight: var(--font-bold);
+}
+
+.stock-movement-page .sm-status {
+    display: inline-block;
+    color: var(--text-light);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+}
+
+.stock-movement-page .sm-status--complete {
+    background: var(--color-success);
+    opacity: 0.85;
+}
+
+.stock-movement-page .sm-status--bad {
+    background: var(--color-error);
+    opacity: 0.85;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+    .stock-movement-page .sm-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .stock-movement-page .sm-cards {
+        grid-template-columns: 1fr;
+    }
+}

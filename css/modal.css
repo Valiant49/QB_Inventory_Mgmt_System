@@ -1,0 +1,92 @@
+.suppliers__modal {
+    width: 600px;
+    height: 700px;
+    background: var(--bg-surface, #FFF);
+}
+
+.suppliers__modal--form {
+    padding: 20px;
+}
+
+.suppliers__modal--form-section {
+    margin: 40px;
+}
+
+.suppliers__modal--form-item {
+    margin: 20px;
+}
+
+.suppliers__modal--input {
+    width: 317.351px;
+    height: 27px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    background: var(--bg-surface, #FFF);
+}
+
+.suppliers__modal--long-input {
+    width: 330px;
+    height: 71px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    background: var(--bg-surface, #FFF);
+}
+
+.suppliers__modal--dropdown {
+    display: flex;
+    width: 317.021px;
+    min-width: 100px;
+    padding: 6px 10px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--border-muted, #72383D);
+    background: var(--bg-surface, #FFF);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.suppliers__modal--add-cancel-container {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+}
+
+.suppliers__modal--cancel-btn {
+    display: flex;
+    width: 161.217px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--border-muted, #72383D);
+    background: var(--bg-surface, #FFF);
+    color: var(--bg-brand-alt, #800E13);
+    text-align: center;
+    font-family: arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.suppliers__modal--add-btn {
+    display: flex;
+    width: 200px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 2px solid var(--border-muted, #72383D);
+    background: var(--bg-brand-alt, #800E13);
+    color: var(--text-on-brand, #FFF);
+    text-align: center;
+    font-family: arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
