@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger | Add Product</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/add product.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>Inventory System</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../index.html" class="nav-link">
+                <img src="../images/nav-icons/home.svg" alt="">
+                <span>Dashboard</span>
+            </a>
+
+            <a href="catalog.html" class="nav-link active">
+                <img src="../images/nav-icons/catalog.svg" alt="">
+                <span>Catalog</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <img src="../images/nav-icons/inventory.svg" alt="">
+                <span>Inventory</span>
+            </a>
+
+            <a href="stock-movement.html" class="nav-link">
+                <img src="../images/nav-icons/stock.svg" alt="">
+                <span>Stock Management</span>
+            </a>
+
+            <a href="branches.html" class="nav-link">
+                <img src="../images/nav-icons/warehouse.svg" alt="">
+                <span>Branches</span>
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <img src="../images/nav-icons/reports.svg" alt="">
+                <span>Reports</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <img src="../images/nav-icons/suppliers.svg" alt="">
+                <span>Suppliers</span>
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <img src="../images/nav-icons/settings.svg" alt="">
+                <span>Settings</span>
+            </a>
+
+            <a href="../index.html" class="nav-link">
+                <img src="../images/nav-icons/logout.svg" alt="">
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+
+        <header class="header">
+            <h3>Product Catalog</h3>
+
+            <button class="catalog-notification"
+                    type="button"
+                    aria-label="Notifications">
+                ♟
+                <span></span>
+            </button>
+        </header>
+
+        <!-- ADD PRODUCT CONTENT -->
+        <main class="main-content add-product-page">
+
+            <section class="add-product-container">
+
+                <h2>Add Product</h2>
+
+                <form class="add-product-form">
+
+                    <!-- PRODUCT IMAGE -->
+                    <div class="product-image-section">
+                        <label class="form-group">
+                            <span>Product Image</span>
+                            <div class="product-image-upload">
+                                <input type="file"
+                                       accept="image/*"
+                                       aria-label="Upload product image">
+                                <p>Click or drag a file to upload</p>
+                                <small>Supported formats: JPG, PNG</small>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- PRODUCT DETAILS -->
+                    <div class="product-form-grid">
+
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+                            <input type="text"
+                                   id="product-name"
+                                   placeholder="Enter product name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-code">Product Code</label>
+                            <input type="text"
+                                   id="product-code"
+                                   placeholder="Enter product code">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option value="">Select Category</option>
+                                <option>Meat</option>
+                                <option>Bread</option>
+                                <option>Vegetables</option>
+                                <option>Condiments</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="unit">Unit of Measure</label>
+                            <select id="unit">
+                                <option value="">Select Unit</option>
+                                <option>Piece</option>
+                                <option>Kilogram</option>
+                                <option>Bundle</option>
+                                <option>Jar</option>
+                                <option>Bottle</option>
+                                <option>Pack</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Unit Price</label>
+                            <input type="number"
+                                   id="price"
+                                   min="0"
+                                   step="0.01"
+                                   placeholder="₱ 0.00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="Active">Active</option>
+                                <option value="Inactive">Inactive</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- DESCRIPTION -->
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description"
+                                  placeholder="Enter product description"></textarea>
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <div class="product-form-actions">
+                        <a href="catalog.html" class="cancel-btn">
+                            Cancel
+                        </a>
+
+                        <button type="submit" class="submit-product-btn">
+                            Add Product
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

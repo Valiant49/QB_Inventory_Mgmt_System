@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queen's Burger | Remove Product</title>
+
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/delete product.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h2>Inventory System</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../index.html" class="nav-link">
+                <img src="../images/nav-icons/home.svg" alt="">
+                <span>Dashboard</span>
+            </a>
+
+            <a href="catalog.html" class="nav-link active">
+                <img src="../images/nav-icons/catalog.svg" alt="">
+                <span>Catalog</span>
+            </a>
+
+            <a href="inventory.html" class="nav-link">
+                <img src="../images/nav-icons/inventory.svg" alt="">
+                <span>Inventory</span>
+            </a>
+
+            <a href="stock-movement.html" class="nav-link">
+                <img src="../images/nav-icons/stock.svg" alt="">
+                <span>Stock Management</span>
+            </a>
+
+            <a href="branches.html" class="nav-link">
+                <img src="../images/nav-icons/warehouse.svg" alt="">
+                <span>Branches</span>
+            </a>
+
+            <a href="reports.html" class="nav-link">
+                <img src="../images/nav-icons/reports.svg" alt="">
+                <span>Reports</span>
+            </a>
+
+            <a href="suppliers.html" class="nav-link">
+                <img src="../images/nav-icons/suppliers.svg" alt="">
+                <span>Suppliers</span>
+            </a>
+
+            <a href="settings.html" class="nav-link">
+                <img src="../images/nav-icons/settings.svg" alt="">
+                <span>Settings</span>
+            </a>
+
+            <a href="../index.html" class="nav-link">
+                <img src="../images/nav-icons/logout.svg" alt="">
+                <span>Logout</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="main-wrapper">
+
+        <header class="header">
+            <h3>Product Catalog</h3>
+
+            <button class="catalog-notification"
+                    type="button"
+                    aria-label="Notifications">
+                ♟
+                <span></span>
+            </button>
+        </header>
+
+        <!-- DELETE CONFIRMATION -->
+        <main class="main-content delete-product-page">
+
+            <section class="delete-confirmation-card">
+
+                <div class="delete-warning-icon">
+                    !
+                </div>
+
+                <h2>Are you sure you want to remove this record?</h2>
+
+                <p>
+                    You are about to remove the following product
+                    from the catalog:
+                </p>
+
+                <div class="delete-product-name">
+                    Burger Patty
+                </div>
+
+                <div class="delete-confirmation-actions">
+
+                    <a href="catalog.html" class="delete-cancel-btn">
+                        Cancel
+                    </a>
+
+                    <button type="button" class="confirm-delete-btn">
+                        Remove
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
