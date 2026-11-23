@@ -1,196 +1,188 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Queen's Burger | Edit Product</title>
 
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/edit product.css">
-</head>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/edit product.css" />
+  </head>
 
-<body>
-
-<div class="app-layout">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <body>
+    <div class="app-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
         <div class="sidebar-brand">
-            <h2>Inventory System</h2>
+          <h2>Inventory System</h2>
         </div>
 
         <nav class="sidebar-nav">
-            <a href="../index.html" class="nav-link">
-                <img src="../images/nav-icons/home.svg" alt="">
-                <span>Dashboard</span>
-            </a>
+          <a href="../index.html" class="nav-link">
+            <img src="../images/nav-icons/home.svg" alt="" />
+            <span>Dashboard</span>
+          </a>
 
-            <a href="catalog.html" class="nav-link active">
-                <img src="../images/nav-icons/catalog.svg" alt="">
-                <span>Catalog</span>
-            </a>
+          <a href="catalog.html" class="nav-link active">
+            <img src="../images/nav-icons/catalog.svg" alt="" />
+            <span>Catalog</span>
+          </a>
 
-            <a href="inventory.html" class="nav-link">
-                <img src="../images/nav-icons/inventory.svg" alt="">
-                <span>Inventory</span>
-            </a>
+          <a href="inventory.html" class="nav-link">
+            <img src="../images/nav-icons/inventory.svg" alt="" />
+            <span>Inventory</span>
+          </a>
 
-            <a href="stock-movement.html" class="nav-link">
-                <img src="../images/nav-icons/stock.svg" alt="">
-                <span>Stock Management</span>
-            </a>
+          <a href="stock-movement.html" class="nav-link">
+            <img src="../images/nav-icons/stock.svg" alt="" />
+            <span>Stock Management</span>
+          </a>
 
-            <a href="branches.html" class="nav-link">
-                <img src="../images/nav-icons/warehouse.svg" alt="">
-                <span>Branches</span>
-            </a>
+          <a href="branches.html" class="nav-link">
+            <img src="../images/nav-icons/warehouse.svg" alt="" />
+            <span>Branches</span>
+          </a>
 
-            <a href="reports.html" class="nav-link">
-                <img src="../images/nav-icons/reports.svg" alt="">
-                <span>Reports</span>
-            </a>
+          <a href="reports.html" class="nav-link">
+            <img
+              src="../images/nav-icons/reports.svg"
+              alt="reports-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Reports</span>
+          </a>
 
-            <a href="suppliers.html" class="nav-link">
-                <img src="../images/nav-icons/suppliers.svg" alt="">
-                <span>Suppliers</span>
-            </a>
+          <a href="suppliers.html" class="nav-link">
+            <img src="../images/nav-icons/suppliers.svg" alt="" />
+            <span>Suppliers</span>
+          </a>
 
-            <a href="settings.html" class="nav-link">
-                <img src="../images/nav-icons/settings.svg" alt="">
-                <span>Settings</span>
-            </a>
+          <a href="settings.html" class="nav-link">
+            <img src="../images/nav-icons/settings.svg" alt="" />
+            <span>Settings</span>
+          </a>
 
-            <a href="../index.html" class="nav-link">
-                <img src="../images/nav-icons/logout.svg" alt="">
-                <span>Logout</span>
-            </a>
+          <a href="../index.html" class="nav-link">
+            <img src="../images/nav-icons/logout.svg" alt="" />
+            <span>Logout</span>
+          </a>
         </nav>
-    </aside>
+      </aside>
 
-    <!-- MAIN WRAPPER -->
-    <div class="main-wrapper">
-
+      <!-- MAIN WRAPPER -->
+      <div class="main-wrapper">
         <header class="header">
-            <h3>Product Catalog</h3>
+          <h3>Product Catalog</h3>
 
-            <button class="catalog-notification"
-                    type="button"
-                    aria-label="Notifications">
-                ♟
-                <span></span>
-            </button>
+          <button
+            class="catalog-notification"
+            type="button"
+            aria-label="Notifications"
+          >
+            ♟
+            <span></span>
+          </button>
         </header>
 
         <!-- EDIT PRODUCT CONTENT -->
         <main class="main-content edit-product-page">
+          <section class="edit-product-container">
+            <h2>Edit Product</h2>
+            <p class="edit-product-subtitle">Edit product details below.</p>
 
-            <section class="edit-product-container">
+            <form class="edit-product-form">
+              <!-- PRODUCT IMAGE -->
+              <div class="edit-image-section">
+                <label class="edit-form-group">
+                  <span>Product Image</span>
+                  <div class="edit-image-upload">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      aria-label="Change product image"
+                    />
+                    <p>Click or drag a file to upload</p>
+                    <small>Supported formats: JPG, PNG</small>
+                  </div>
+                </label>
+              </div>
 
-                <h2>Edit Product</h2>
-                <p class="edit-product-subtitle">
-                    Edit product details below.
-                </p>
+              <!-- PRODUCT DETAILS -->
+              <div class="edit-product-grid">
+                <div class="edit-form-group">
+                  <label for="product-name">Product Name</label>
+                  <input type="text" id="product-name" value="Burger Patty" />
+                </div>
 
-                <form class="edit-product-form">
+                <div class="edit-form-group">
+                  <label for="product-code">Product Code</label>
+                  <input type="text" id="product-code" value="PRD-001" />
+                </div>
 
-                    <!-- PRODUCT IMAGE -->
-                    <div class="edit-image-section">
-                        <label class="edit-form-group">
-                            <span>Product Image</span>
-                            <div class="edit-image-upload">
-                                <input type="file"
-                                       accept="image/*"
-                                       aria-label="Change product image">
-                                <p>Click or drag a file to upload</p>
-                                <small>Supported formats: JPG, PNG</small>
-                            </div>
-                        </label>
-                    </div>
+                <div class="edit-form-group">
+                  <label for="category">Category</label>
+                  <select id="category">
+                    <option>Meat</option>
+                    <option>Bread</option>
+                    <option>Vegetables</option>
+                    <option>Condiments</option>
+                  </select>
+                </div>
 
-                    <!-- PRODUCT DETAILS -->
-                    <div class="edit-product-grid">
+                <div class="edit-form-group">
+                  <label for="unit">Unit of Measure</label>
+                  <select id="unit">
+                    <option>Piece</option>
+                    <option>Kilogram</option>
+                    <option>Bundle</option>
+                    <option>Jar</option>
+                    <option>Bottle</option>
+                    <option>Pack</option>
+                  </select>
+                </div>
 
-                        <div class="edit-form-group">
-                            <label for="product-name">Product Name</label>
-                            <input type="text"
-                                   id="product-name"
-                                   value="Burger Patty">
-                        </div>
+                <div class="edit-form-group">
+                  <label for="price">Unit Price</label>
+                  <input
+                    type="number"
+                    id="price"
+                    value="85.00"
+                    min="0"
+                    step="0.01"
+                  />
+                </div>
 
-                        <div class="edit-form-group">
-                            <label for="product-code">Product Code</label>
-                            <input type="text"
-                                   id="product-code"
-                                   value="PRD-001">
-                        </div>
+                <div class="edit-form-group">
+                  <label for="status">Status</label>
+                  <select id="status">
+                    <option>Active</option>
+                    <option>Inactive</option>
+                  </select>
+                </div>
+              </div>
 
-                        <div class="edit-form-group">
-                            <label for="category">Category</label>
-                            <select id="category">
-                                <option>Meat</option>
-                                <option>Bread</option>
-                                <option>Vegetables</option>
-                                <option>Condiments</option>
-                            </select>
-                        </div>
+              <!-- DESCRIPTION -->
+              <div class="edit-form-group">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  placeholder="Enter product description"
+                ></textarea>
+              </div>
 
-                        <div class="edit-form-group">
-                            <label for="unit">Unit of Measure</label>
-                            <select id="unit">
-                                <option>Piece</option>
-                                <option>Kilogram</option>
-                                <option>Bundle</option>
-                                <option>Jar</option>
-                                <option>Bottle</option>
-                                <option>Pack</option>
-                            </select>
-                        </div>
+              <!-- BUTTONS -->
+              <div class="edit-form-actions">
+                <a href="catalog.html" class="edit-cancel-btn"> Cancel </a>
 
-                        <div class="edit-form-group">
-                            <label for="price">Unit Price</label>
-                            <input type="number"
-                                   id="price"
-                                   value="85.00"
-                                   min="0"
-                                   step="0.01">
-                        </div>
-
-                        <div class="edit-form-group">
-                            <label for="status">Status</label>
-                            <select id="status">
-                                <option>Active</option>
-                                <option>Inactive</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                    <!-- DESCRIPTION -->
-                    <div class="edit-form-group">
-                        <label for="description">Description</label>
-                        <textarea id="description"
-                                  placeholder="Enter product description"></textarea>
-                    </div>
-
-                    <!-- BUTTONS -->
-                    <div class="edit-form-actions">
-                        <a href="catalog.html" class="edit-cancel-btn">
-                            Cancel
-                        </a>
-
-                        <button type="submit" class="save-changes-btn">
-                            Save Changes
-                        </button>
-                    </div>
-
-                </form>
-
-            </section>
-
+                <button type="submit" class="save-changes-btn">
+                  Save Changes
+                </button>
+              </div>
+            </form>
+          </section>
         </main>
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
