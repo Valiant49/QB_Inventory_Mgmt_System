@@ -1,208 +1,565 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/suppliers.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suppliers | Queen's Burger</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Shared Global Variables & App Shell CSS -->
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/app.css" />
+
+    <!-- Page-Specific Scoped CSS -->
+    <link rel="stylesheet" href="../css/suppliers.css" />
+
+    <!-- Suppliers Page Script -->
     <script src="../js/suppliers.js" defer></script>
-</head>
-<body>
-    <main>
-        <div class="suppliers__topsec">
-            <input class="suppliers__topsec--search" list="products" type="text" placeholder="Search Products...">
+  </head>
+
+  <body>
+    <div class="app-layout">
+      <!-- Sidebar (Approved App Shell) -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+          <h2>Inventory System</h2>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-link">
+            <img
+              src="../images/nav-icons/home.svg"
+              alt="home-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Dashboard</span>
+          </a>
+
+          <a href="catalog.html" class="nav-link">
+            <img
+              src="../images/nav-icons/catalog.svg"
+              alt="catalog-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Catalog</span>
+          </a>
+
+          <a href="inventory.html" class="nav-link">
+            <img
+              src="../images/nav-icons/inventory.svg"
+              alt="inventory-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Inventory</span>
+          </a>
+
+          <a href="stock-movement.html" class="nav-link">
+            <img
+              src="../images/nav-icons/stock.svg"
+              alt="stocks-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Stock Management</span>
+          </a>
+
+          <a href="branches.html" class="nav-link">
+            <img
+              src="../images/nav-icons/warehouse.svg"
+              alt="branches-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Branches</span>
+          </a>
+
+          <a href="reports.html" class="nav-link" style="display: none">
+            <img
+              src="../images/nav-icons/reports.svg"
+              alt="reports-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Reports</span>
+          </a>
+
+          <a href="suppliers.html" class="nav-link active">
+            <img
+              src="../images/nav-icons/suppliers.svg"
+              alt="suppliers-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Suppliers</span>
+          </a>
+
+          <a href="settings.html" class="nav-link">
+            <img
+              src="../images/nav-icons/settings.svg"
+              alt="settings-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Settings</span>
+          </a>
+
+          <a href="../index.html" class="nav-link">
+            <img
+              src="../images/nav-icons/logout.svg"
+              alt="logout-icon"
+              width="24px"
+              height="24px"
+            />
+            <span>Logout</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Area -->
+      <div class="main-wrapper">
+        <!-- Header (Approved App Shell) -->
+        <header class="header">
+          <h3>Suppliers</h3>
+
+          <div class="header-user">
+            <a href="#" aria-label="Notifications">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                height="24px"
+                width="24px"
+                fill="#000000"
+              >
+                <path
+                  d="M4,19V17H6V10Q6,7.93 7.25,6.31T10.5,4.2V3.5q0-0.63 0.44-1.06T12,2t1.06,0.44T13.5,3.5V4.2q2,0.5 3.25,2.11T18,10v7h2v2H4Zm8-7.5ZM12,22q-0.82,0-1.41-0.59T10,20h4q0,0.82-0.59,1.41T12,22ZM8,17h8V10q0-1.65-1.17-2.82T12,6T9.18,7.18T8,10v7Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <!-- Page Content (Scoped to .suppliers-page) -->
+        <main class="main-content suppliers-page">
+          <div class="suppliers__topsec">
+            <input
+              class="suppliers__topsec--search"
+              list="products"
+              type="text"
+              placeholder="Search Suppliers..."
+              aria-label="Search suppliers"
+            />
 
             <div class="suppliers__topsec--dropdown-button-container">
-                <select name="category" id="category" class="suppliers__topsec--dropdown">
-                    <option value="category">Category</option>
-                    <option value="name">Supplier Name</option>
-                    <option value="location">Location</option>
-                    <option value="email">Email</option>
-                    <option value="contact">Contacts</option>
-                    <option value="status">Status</option>
-                </select>
-                <select name="sort" id="sort" class="suppliers__topsec--dropdown">
-                    <option value="sort">Sort</option>
-                    <option value="alphabetically">Alphabetically (A - Z)</option>
-                    <option value="status">By Status</option>
-                </select>
-                <button class="suppliers__topsec--add-supplier-btn" onclick="showForm()">+ Add Supplier</button>
-            </div>
-        </div>
+              <select
+                name="category"
+                id="category"
+                class="suppliers__topsec--dropdown"
+                aria-label="Filter suppliers by category"
+              >
+                <option value="category">Category</option>
+                <option value="name">Supplier Name</option>
+                <option value="location">Location</option>
+                <option value="email">Email</option>
+                <option value="contact">Contacts</option>
+                <option value="status">Status</option>
+              </select>
 
-        <div class="suppliers__table-container">
-        <table class="suppliers__table">
-            <tr class="suppliers__table--top">
-                <th>Supplier Name</th>
-                <th>Location</th>
-                <th>Email</th>
-                <th>Contact Person</th>
-                <th>Contact Number</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>PattyPro Meats</td>
-                <td>Makati City</td>
-                <td>inventory@pattypro.com</td>
-                <td class="center">Iñigo Borromeo</td>
-                <td class="center">0949 586 7652</td>
-                <td class="background-success">Active</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>Golden Bun Co.</td>
-                <td>Pasig City</td>
-                <td>procurement@goldenbun.com</td>
-                <td class="center">Luisita Valladares</td>
-                <td class="center">0936 201 0562</td>
-                <td class="background-success">Active</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>Freshleaf Foods</td>
-                <td>Taguig City</td>
-                <td>resources@freshleaf.com</td>
-                <td class="center">Philomena Cruz</td>
-                <td class="center">0945 136 4953</td>
-                <td class="background-success">Active</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>Melt Dairy Co.</td>
-                <td>Quezon City</td>
-                <td>procure@meltdairy.com</td>
-                <td class="center">Reese Madrid</td>
-                <td class="center">0945 240 9367</td>
-                <td class="background-error">Inactive</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>Zesty Sauce Co.</td>
-                <td>Angeles City</td>
-                <td>inventory@zestysauce.com</td>
-                <td class="center">Solene Clemente</td>
-                <td class="center">0961 949 6560</td>
-                <td class="background-success">Active</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>PattyPro Meat 2</td>
-                <td>Calamba City</td>
-                <td>storage@pattypro2.com</td>
-                <td class="center">Archie Angeles</td>
-                <td class="center">0927 253 2570</td>
-                <td class="background-success">Active</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-            <tr class="suppliers__table--rows">
-                <td>VeggieTales Inc.</td>
-                <td>Batangas City</td>
-                <td>inventory@veggietale.com</td>
-                <td class="center">Juan Dela Cruz</td>
-                <td class="center">0949 744 7135</td>
-                <td class="background-warning">Under Repair</td>
-                <td class="center"><button class="suppliers__table--action-btn" onclick="showWarning()">...</button></td>
-            </tr>
-        </table>
-        </div>
-        <dialog class="suppliers__modal" id="supplier-modal">
-            <h1 class="suppliers__modal--title">Add Supplier</h1>
+              <select
+                name="sort"
+                id="sort"
+                class="suppliers__topsec--dropdown"
+                aria-label="Sort suppliers"
+              >
+                <option value="sort">Sort</option>
+                <option value="alphabetically">Alphabetically (A - Z)</option>
+                <option value="status">By Status</option>
+              </select>
+
+              <button
+                type="button"
+                class="suppliers__topsec--add-supplier-btn"
+                onclick="showForm()"
+              >
+                + Add Supplier
+              </button>
+            </div>
+          </div>
+
+          <div class="suppliers__table-container">
+            <table class="suppliers__table">
+              <thead>
+                <tr class="suppliers__table--top">
+                  <th>Supplier Name</th>
+                  <th>Location</th>
+                  <th>Email</th>
+                  <th>Contact Person</th>
+                  <th>Contact Number</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr class="suppliers__table--rows">
+                  <td>PattyPro Meats</td>
+                  <td>Makati City</td>
+                  <td>inventory@pattypro.com</td>
+                  <td class="center">Iñigo Borromeo</td>
+                  <td class="center">0949 586 7652</td>
+                  <td class="background-success">Active</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>Golden Bun Co.</td>
+                  <td>Pasig City</td>
+                  <td>procurement@goldenbun.com</td>
+                  <td class="center">Luisita Valladares</td>
+                  <td class="center">0936 201 0562</td>
+                  <td class="background-success">Active</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>Freshleaf Foods</td>
+                  <td>Taguig City</td>
+                  <td>resources@freshleaf.com</td>
+                  <td class="center">Philomena Cruz</td>
+                  <td class="center">0945 136 4953</td>
+                  <td class="background-success">Active</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>Melt Dairy Co.</td>
+                  <td>Quezon City</td>
+                  <td>procure@meltdairy.com</td>
+                  <td class="center">Reese Madrid</td>
+                  <td class="center">0945 240 9367</td>
+                  <td class="background-error">Inactive</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>Zesty Sauce Co.</td>
+                  <td>Angeles City</td>
+                  <td>inventory@zestysauce.com</td>
+                  <td class="center">Solene Clemente</td>
+                  <td class="center">0961 949 6560</td>
+                  <td class="background-success">Active</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>PattyPro Meat 2</td>
+                  <td>Calamba City</td>
+                  <td>storage@pattypro2.com</td>
+                  <td class="center">Archie Angeles</td>
+                  <td class="center">0927 253 2570</td>
+                  <td class="background-success">Active</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+
+                <tr class="suppliers__table--rows">
+                  <td>VeggieTales Inc.</td>
+                  <td>Batangas City</td>
+                  <td>inventory@veggietale.com</td>
+                  <td class="center">Juan Dela Cruz</td>
+                  <td class="center">0949 744 7135</td>
+                  <td class="background-warning">Under Repair</td>
+                  <td class="center">
+                    <button
+                      type="button"
+                      class="suppliers__table--action-btn"
+                      onclick="showWarning()"
+                    >
+                      ...
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ADD SUPPLIER MODAL -->
+          <dialog class="suppliers__modal" id="supplier-modal">
+            <h2 class="suppliers__modal--title">Add Supplier</h2>
             <form action="" method="get" class="suppliers__modal--form">
-                <div class="suppliers__modal--form-section">
-                    <h2 class="suppliers__modal--subtitle">Supplier Identification</h2>
-                    <div class="suppliers__modal--form-item">
-                        <label for="supplier-name" class="suppliers__modal--label">Supplier Name</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-item">
-                        <label for="supplier-code" class="suppliers__modal--label">Supplier Code</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-item">
-                        <label for="supplier-name" class="suppliers__modal--label">Supplier Name</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-item">
-                        <label for="supply-type" class="suppliers__modal--label">Supply Type</label>
-                        <select class="suppliers__modal--dropdown">
-                            <option value="please-select">Please Select</option>
-                            <option value="patty">Patty</option>
-                            <option value="buns">Buns</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="dairy">Dairy</option>
-                        </select>
-                    </div>
-                    <div class="suppliers__modal--form-item">
-                        <label for="supply-status" class="suppliers__modal--label">Status</label>
-                        <select class="suppliers__modal--dropdown">
-                            <option value="please-select">Please Select</option>
-                            <option value="available">Available</option>
-                            <option value="low-stock">Low Stock</option>
-                            <option value="out-of-stock">Out of Stock</option>
-                        </select>
-                    </div>
+              <div class="suppliers__modal--form-section">
+                <h3 class="suppliers__modal--subtitle">
+                  Supplier Identification
+                </h3>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="supplier-name" class="suppliers__modal--label"
+                    >Supplier Name</label
+                  >
+                  <input
+                    id="supplier-name"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
                 </div>
 
-                <div class="suppliers__modal--form-section">
-                    <h2 class="suppliers__modal--subtitle">Contact Person</h2>
-                    <div class="suppliers__modal--form-section">
-                        <div class="suppliers__modal--form-item">  
-                            <label for="branch-manager" class="suppliers__modal--label">Branch Manager</label>
-                            <input type="text" class="suppliers__modal--input">
-                        </div>
-                        <div class="suppliers__modal--form-item">
-                            <label for="email" class="suppliers__modal--label">Email Address</label>
-                            <input type="email" class="suppliers__modal--input">
-                        </div>
-                        <div class="suppliers__modal--form-item">
-                            <label for="contact-num" class="suppliers__modal--label">Contact Number</label>
-                            <input type="text" class="suppliers__modal--input">
-                        </div>
-                    </div>
+                <div class="suppliers__modal--form-item">
+                  <label for="supplier-code" class="suppliers__modal--label"
+                    >Supplier Code</label
+                  >
+                  <input
+                    id="supplier-code"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
                 </div>
-                
-                <div class="suppliers__modal--form-section">
-                    <h2 class="suppliers__modal--subtitle">Branch Location</h2>
-                    <div class="suppliers__modal--form-section">
-                        <label for="address" class="suppliers__modal--label">Address</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-section">
-                        <label for="city-municipalty" class="suppliers__modal--label">City/Municipality</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-section">
-                        <label for="province-region" class="suppliers__modal--label">Province/Region</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-section">
-                        <label for="zip-code" class="suppliers__modal--label">Zip Code</label>
-                        <input type="text" class="suppliers__modal--input">
-                    </div>
-                    <div class="suppliers__modal--form-section">
-                        <label for="notes" class="suppliers__modal--label">Notes</label>
-                        <input type="text" class="suppliers__modal--long-input">
-                    </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="supply-type" class="suppliers__modal--label"
+                    >Supply Type</label
+                  >
+                  <select id="supply-type" class="suppliers__modal--dropdown">
+                    <option value="please-select">Please Select</option>
+                    <option value="patty">Patty</option>
+                    <option value="buns">Buns</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="dairy">Dairy</option>
+                  </select>
                 </div>
-                <div class="suppliers__modal--add-cancel-container">
-                    <button class="suppliers__modal--cancel-btn" onclick="hideForm()">Cancel</button>
-                    <a href="suppliers.html"><button class="suppliers__modal--add-btn">Add Supplier</button></a>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="supply-status" class="suppliers__modal--label"
+                    >Status</label
+                  >
+                  <select id="supply-status" class="suppliers__modal--dropdown">
+                    <option value="please-select">Please Select</option>
+                    <option value="available">Available</option>
+                    <option value="low-stock">Low Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                  </select>
                 </div>
+              </div>
+
+              <div class="suppliers__modal--form-section">
+                <h3 class="suppliers__modal--subtitle">Contact Person</h3>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="branch-manager" class="suppliers__modal--label"
+                    >Branch Manager</label
+                  >
+                  <input
+                    id="branch-manager"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="email" class="suppliers__modal--label"
+                    >Email Address</label
+                  >
+                  <input
+                    id="email"
+                    type="email"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="contact-num" class="suppliers__modal--label"
+                    >Contact Number</label
+                  >
+                  <input
+                    id="contact-num"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+              </div>
+
+              <div class="suppliers__modal--form-section">
+                <h3 class="suppliers__modal--subtitle">Branch Location</h3>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="address" class="suppliers__modal--label"
+                    >Address</label
+                  >
+                  <input
+                    id="address"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="city-municipalty" class="suppliers__modal--label"
+                    >City/Municipality</label
+                  >
+                  <input
+                    id="city-municipalty"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="province-region" class="suppliers__modal--label"
+                    >Province/Region</label
+                  >
+                  <input
+                    id="province-region"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="zip-code" class="suppliers__modal--label"
+                    >Zip Code</label
+                  >
+                  <input
+                    id="zip-code"
+                    type="text"
+                    class="suppliers__modal--input"
+                  />
+                </div>
+
+                <div class="suppliers__modal--form-item">
+                  <label for="notes" class="suppliers__modal--label"
+                    >Notes</label
+                  >
+                  <input
+                    id="notes"
+                    type="text"
+                    class="suppliers__modal--long-input"
+                  />
+                </div>
+              </div>
+
+              <div class="suppliers__modal--add-cancel-container">
+                <button
+                  type="button"
+                  class="suppliers__modal--cancel-btn"
+                  onclick="hideForm()"
+                >
+                  Cancel
+                </button>
+                <a href="suppliers.html" class="suppliers__modal--add-btn"
+                  >Add Supplier</a
+                >
+              </div>
             </form>
-        </dialog>
-        <dialog class="suppliers__warning" id="supplier-warning">
+          </dialog>
+
+          <!-- REMOVE SUPPLIER WARNING DIALOG -->
+          <dialog class="suppliers__warning" id="supplier-warning">
             <div class="supplier__warning--sign-container">
-                <img src="Polygon 1.svg" alt="Warning Symbol" class="suppliers__warning--image">
-                <h1 class="exclamation">!</h1>
+              <img
+                src="../images/Polygon 1.svg"
+                alt="Warning Symbol"
+                class="suppliers__warning--image"
+              />
+              <span class="exclamation">!</span>
             </div>
-            <p class="suppliers__warning--description">Are you sure you want to remove this supplier?</p>
-            <p class="suppliers__warning--description">This action cannot be undone.</p>
+            <p class="suppliers__warning--description">
+              Are you sure you want to remove this supplier?
+            </p>
+            <p class="suppliers__warning--description">
+              This action cannot be undone.
+            </p>
             <div class="suppliers__warning--yes-no-container">
-                <button class="suppliers__warning--cancel-btn" onclick="hideWarning()">Cancel</button>
-                <a href="suppliers.html"><button class="suppliers__warning--remove-btn">Remove</button></a>
+              <button
+                type="button"
+                class="suppliers__warning--cancel-btn"
+                onclick="hideWarning()"
+              >
+                Cancel
+              </button>
+              <a href="suppliers.html" class="suppliers__warning--remove-btn"
+                >Remove</a
+              >
             </div>
-        </dialog>
-    </main>
-</body>
+          </dialog>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const currentFile = (
+          window.location.pathname.split("/").pop() || "dashboard.html"
+        ).toLowerCase();
+        const links = document.querySelectorAll(".sidebar-nav .nav-link");
+
+        links.forEach((link) => {
+          const href = link.getAttribute("href") || "";
+          const targetFile = href.split("?")[0].split("/").pop().toLowerCase();
+
+          link.classList.toggle("active", targetFile === currentFile);
+
+          link.addEventListener("click", (e) => {
+            if (!href || href === "#") {
+              return;
+            }
+            e.preventDefault();
+            window.location.href = new URL(href, window.location.href).href;
+          });
+        });
+      })();
+    </script>
+  </body>
 </html>

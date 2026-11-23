@@ -1,298 +1,136 @@
+/* ==========================
+   SETTINGS PAGE (SCOPED)
+========================== */
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.settings-page.main-content {
+    padding: 24px 28px;
+    background-color: var(--bg-canvas, #faf8f5);
+    color: var(--text-dark, #222);
+    font-family: var(--font-primary, Arial, Helvetica, sans-serif);
 }
 
-body {
+.settings-page button,
+.settings-page input,
+.settings-page select {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f7f5;
-    color: #222;
 }
 
-button,
-input,
-select {
-    font-family: inherit;
-}
-
-button {
+.settings-page button {
     cursor: pointer;
 }
 
-.portal {
-    display: flex;
-    min-height: 100vh;
-    border: 6px solid #444;
-}
-
-
-/* SIDEBAR */
-
-.sidebar {
-    width: 180px;
-    min-width: 165px;
-    background-color: #690e16;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.sidebar__brand {
-    height: 46px;
-    display: flex;
-    align-items: center;
-    padding: 5px 8px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    gap: 5px;
-}
-
-.sidebar__logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.sidebar__brand-text h2 {
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-.sidebar__brand-text span {
-    display: block;
-    font-size: 7px;
-    letter-spacing: 3px;
-    margin-top: 2px;
-    color: #e6caca;
-}
-
-.sidebar__nav {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 12px;
-    gap: 2px;
-}
-
-.sidebar__link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    height: 25px;
-    padding: 5px 7px;
-    border-radius: 4px;
-    text-decoration: none;
-    color: white;
-    font-size: 11px;
-    transition: background 0.2s;
-}
-
-.sidebar__link:hover,
-.sidebar__link--active {
-    background-color: rgba(255,255,255,0.12);
-}
-
-.sidebar__icon {
-    width: 12px;
-    font-size: 15px;
-    text-align: center;
-}
-
-
-/* ADMIN PROFILE */
-
-.sidebar__profile {
-    position: absolute;
-    bottom: 0;
-    left: 7px;
-    right: 7px;
-    height: 35px;
-    margin-bottom: 0;
-    background-color: #bd842f;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    padding: 4px 9px;
-    gap: 9px;
-}
-
-.sidebar__profile-image {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.sidebar__profile-info {
-    display: flex;
-    flex-direction: column;
-    color: black;
-}
-
-.sidebar__profile-info strong {
-    font-size: 12px;
-}
-
-.sidebar__profile-info span {
-    font-size: 8px;
-}
-/* MAIN CONTENT */
-
-.main-content {
-    flex: 1;
-    min-width: 0;
-    background-color: #fff;
-}
-
-/* TOPBAR */
-
-.topbar {
-    height: 46px;
-    border-bottom: 1px solid #aaa;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.topbar h1 {
-    font-size: 14px;
-    font-weight: bold;
-    color: #000;
-}
-
-.topbar__notification {
-    font-size: 19px;
-    color: #000;
-    cursor: pointer;
-}
 
 /* SETTINGS CONTENT */
 
-.settings-content {
-    padding: 26px 30px;
+.settings-page .settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 760px;
 }
+
 
 /* SETTINGS SECTION */
 
-.settings-section {
-    margin-bottom: 23px;
+.settings-page .settings-section {
+    background-color: var(--bg-surface, #fff);
+    border: 1px solid var(--bg-border, #e2e8f0);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    padding: 22px 24px;
 }
 
-.settings-section h2 {
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 3px;
+.settings-page .settings-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark, #222);
+    margin-bottom: 6px;
 }
 
-.settings-section p {
-    font-size: 9px;
-    line-height: 12px;
-    color: #333;
+.settings-page .settings-section p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
 }
+
 
 /* SETTINGS FORM */
 
-.settings-form {
-    margin-top: 19px;
-    margin-left: 18px;
+.settings-page .settings-form {
+    margin-top: 18px;
     display: flex;
     flex-direction: column;
     gap: 14px;
+    max-width: 380px;
 }
 
-.settings-group {
+.settings-page .settings-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
-.settings-group label {
-    font-size: 9px;
-    color: #333;
+.settings-page .settings-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark, #222);
 }
 
-.settings-group input {
-    width: 129px;
-    height: 19px;
-    border: 1px solid #ddd;
-    padding: 2px 6px;
-    font-size: 8px;
+.settings-page .settings-group input {
+    width: 100%;
+    height: 36px;
+    border: 1px solid var(--border-muted, #72383d);
+    background-color: var(--bg-surface, #fff);
+    color: var(--text-dark, #222);
+    padding: 0 10px;
+    font-size: 13px;
     outline: none;
-    border-radius: 1px;
+    border-radius: 6px;
 }
 
-.settings-group input:focus {
-    border-color: #800d18;
+.settings-page .settings-group input:focus {
+    border-color: var(--bg-brand, #640d14);
+    box-shadow: 0 0 0 2px rgba(100, 13, 20, 0.1);
 }
 
-/* UPDATE PASSWORD */
-
-.password-section {
-    margin-top: 23px;
-}
 
 /* DELETE ACCOUNT */
 
-.delete-section {
-    margin-top: 23px;
+.settings-page .delete-section p {
+    max-width: 560px;
 }
 
-.delete-section p {
-    max-width: 465px;
-}
-
-.delete-account-button {
-    margin-top: 12px;
-    margin-left: 17px;
-    padding: 5px 9px;
-    background-color: #800d18;
-    color: white;
+.settings-page .delete-account-button {
+    margin-top: 14px;
+    padding: 9px 16px;
+    background-color: var(--bg-brand-alt, #800e13);
+    color: var(--text-light, #fff);
     border: none;
-    border-radius: 2px;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-.delete-account-button:hover {
-    background-color: #5e0b12;
+.settings-page .delete-account-button:hover {
+    background-color: var(--bg-brand, #640d14);
 }
+
 
 /* RESPONSIVE */
 
 @media (max-width: 600px) {
-
-    .portal {
-        border-width: 3px;
+    .settings-page.main-content {
+        padding: 16px 12px;
     }
 
-    .sidebar {
-        width: 130px;
-        min-width: 130px;
+    .settings-page .settings-section {
+        padding: 18px 16px;
     }
 
-    .sidebar__brand-text h2 {
-        font-size: 12px;
-    }
-
-    .sidebar__link {
-        font-size: 9px;
-        gap: 7px;
-    }
-
-    .settings-content {
-        padding: 20px 15px;
-    }
-
-    .topbar {
-        padding: 0 12px;
-    }
-
-    .delete-section p {
+    .settings-page .settings-form {
         max-width: 100%;
     }
 }
